@@ -32,6 +32,7 @@ fn fib(n: u32) : u32 {
    return a + b;
 }
 
+#entry
 print(fib(8))
 ```
 
@@ -45,6 +46,7 @@ Stage 0:
        (let b (call fib (- n 2)))
        (ret $u32 (+ a b)))))
 
+(label entry)
 (call print (call fib 8))
 ```
 
