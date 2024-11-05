@@ -52,6 +52,16 @@ Stage 0:
 
 Assembly:
 ```
+fib:                   # [p0: n]
+  less-than p0 2       # a: (< n 2)
+  if-false  :else0     # (if ...)
+
+  set       rt 1       # (ret $u32 1)
+  ret
+
+else0:
+  subtract n 1         # - n 1
+  
 
 ```
 
