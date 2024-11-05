@@ -10,6 +10,8 @@
 # PLOSC assembler (plas)
 
 # PLOSC virtual machine (plovm)
+
+* Stack-based architecture
  
 # PLOSC operating system (plos)
 
