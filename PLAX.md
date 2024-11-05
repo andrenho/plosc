@@ -37,7 +37,7 @@ fn fib(n: u32) : u32 {
 (def (fib a $u32 b $u32)
   (if (< n 2)
     (ret $u32 1)
-    (block
+    (begin
        (let a (call fib (- n 1)))
        (let b (call fib (- n 2)))
        (ret $u32 (+ a b)))))
