@@ -27,12 +27,20 @@ Stage 0:
 ```
 fn fib(n: u32) : u32 {
    if n < 2 { return 1; }
-   return fib(n - 1) + fib(n - 2);
+   let a : u32 = fib(n - 1);
+   let b : u32 = fib(n - 2);
+   return a + b;
 }
 ```
 
 ```
-
+(def (fib a $u32 b $u32)
+  (if (< n 2)
+    (ret $u32 1)
+    (block
+       (let a (call fib (- n 1)))
+       (let b (call fib (- n 2)))
+       (ret $u32 (+ a b)))))
 ```
 
 # Stage 0
