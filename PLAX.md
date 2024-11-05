@@ -23,7 +23,7 @@
 
 Fibbonacci
 
-Stage 0:
+Stage 1:
 ```
 fn fib(n: u32) : u32 {
    if n < 2 { return 1; }
@@ -31,8 +31,11 @@ fn fib(n: u32) : u32 {
    let b : u32 = fib(n - 2);
    return a + b;
 }
+
+print(fib(8))
 ```
 
+Stage 0:
 ```
 (def (fib a $u32 b $u32)
   (if (< n 2)
@@ -41,6 +44,13 @@ fn fib(n: u32) : u32 {
        (let a (call fib (- n 1)))
        (let b (call fib (- n 2)))
        (ret $u32 (+ a b)))))
+
+(call print (call fib 8))
+```
+
+Assembly:
+```
+
 ```
 
 # Stage 0
